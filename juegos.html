@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+    <title>LaVuelta2026: Juegos</title> 
+    <link rel="icon" href="multimedia/favicon.ico" type="image/x-icon">
+
+   <meta name="author" content="Joaquín Alfaro López" />
+    <meta name="description" content="Documento juegos.html del proyecto La Vuelta 2026" />
+   
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+
+    <!--Enlace a las hojas de estilo-->
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+</head>
+
+<body>
+   <!-- contenido de juegos.html  -->
+    <header>
+        <h1><a href="index.html">LaVuelta2026</a></h1>
+         <nav>
+        <a href="index.html">Inicio</a>    
+        <a href="ciclista.html">Ciclista</a>
+        <a href="equipo.html">Equipo</a>
+        <a href="etapa.html">Etapa</a>
+        <a href="meteorologia.html">Meteorologia</a>
+        <a href="clasificaciones.html">Clasificaciones</a>
+        <a href="juegos.html" aria-current="page">Juegos</a>
+        <a href="ayuda.html">Ayuda</a>
+        
+        </nav>
+    </header> 
+
+    <nav aria-label="migas">
+    <ol>
+        <li><a href="index.html">Inicio</a></li>
+        <li>|</li>
+        <li>Juegos</li>
+    </ol>
+    </nav>
+
+    <main>
+    <h2>Juegos</h2>
+    <section>
+        <h3>¿Conoces la etapa?</h3>
+        <p>Este juego consta de 10 preguntas sobre la información de la etapa. Para responderlas consulta los datos de la etapa en la página Etapa de este sitio.</p>
+    </section>
+    <form>
+        <fieldset>
+            <legend>Almuñécar-Loja</legend>
+
+            <p>
+                <label for="numeroEtapa">Número de la etapa:</label>
+                <input type="number" id="numeroEtapa" min="1" max="21" />
+            </p>
+
+            <p>
+                <label for="fechaEtapa">Fecha de la etapa:</label>
+                <input type="date" id="fechaEtapa" min="2026-08-22" max="2026-09-13" />
+            </p>
+            <p>
+                <label for="salida">Lugar de salida:</label>
+                <select id="salida" required>
+                    <option value="">Seleccione una opción</option>
+                    <option>Monaco</option>
+                    <option>Gruissan</option>
+                    <option>Andorra la Vella</option>
+                    <option>Falset</option>
+                    <option>Alcossebre</option>
+                    <option>Vall d'Alba</option>
+                    <option>Puçol</option>
+                    <option>Villajoyosa</option>
+                    <option>Alcaraz</option>
+                    <option>Cartagena</option>
+                    <option>Vera</option>
+                    <option>Almuñécar</option>
+                    <option>Jaén</option>
+                    <option>Palma del Río</option>
+                    <option>Cortegana</option>
+                    <option>Dos Hermanas</option>
+                    <option>El Puerto de Santa María</option>
+                    <option>Vélez-Málaga</option>
+                    <option>La Calahorra</option>
+                    <option>Granada</option>
+                </select>
+            </p>    
+
+            <p>
+                <label for="llegada">Lugar de llegada:</label>
+                <select id="llegada" required>
+                    <option value="">Seleccione una opción</option>
+                    <option>Monaco</option>
+                    <option>Manosque</option>
+                    <option>Font Romeu</option>
+                    <option>Andorra la Vella</option>
+                    <option>Roquetes</option>
+                    <option>Castellón</option>
+                    <option>Aramón Valdelinares</option>
+                    <option>Xeraco</option>
+                    <option>Alto de Aitana</option>
+                    <option>Elche de la Sierra</option>
+                    <option>Lorca</option>
+                    <option>Calar Alto</option>
+                    <option>Loja</option>
+                    <option>Sierra de la Pandera</option>
+                    <option>Córdoba</option>
+                    <option>Palos de la Frontera</option>
+                    <option>Sevilla</option>
+                    <option>Jerez de la Frontera</option>
+                    <option>Peñas Blancas</option>
+                    <option>Collado del Alguacil</option>
+                    <option>Granada</option>
+                </select>
+            </p>
+
+            <fieldset>
+                   <legend>Hitos de la etapa:</legend>
+                   <label><input type="checkbox" id="puerto" /> Puerto de montaña</label>
+                   <label><input type="checkbox" id="puertoEspecial" /> Puerto categoría especial</label>
+                   <label><input type="checkbox" id="sprintIntermedio" /> Sprint intermedio</label>
+                   <label><input type="checkbox" id="sprintBonificado" /> Sprint bonificado</label>
+                   <label><input type="checkbox" id="sinHitos" /> Sin hitos</label>
+            </fieldset>
+
+            <p>
+                <label for="dureza">Dureza de la etapa (1-10):</label>
+                <input type="range" id="dureza" min="1" max="10" value="5" />
+            </p>
+
+            <p>
+                <label for="longitud">Longitud de la etapa (km):</label>
+                <input type="number" id="longitud" min="0" step="0.1" />
+            </p>
+
+            <p>
+                <label for="desnivel">Desnivel acumulado (m):</label>
+                <input type="number" id="desnivel" min="0" />
+            </p>
+
+            <p>
+                <label for="descripcion">Describe brevemente la etapa:</label>
+                <textarea id="descripcion" rows="4" cols="50"></textarea>
+            </p>
+
+            <p>
+                <label for="nombre">Nombre del participante:</label>
+                <input type="text" id="nombre" />
+            </p>
+
+            <button type="submit">Enviar respuestas</button>
+        </fieldset>
+    </form>
+    </main>
+    <footer>
+        <p>Joaquín Alfaro López</p>
+        <address>
+            <a href="mailto:UO289959@uniovi.es">UO289959@uniovi.es
+            </a>
+        </address>
+ </footer>
+</body>
+</html>
