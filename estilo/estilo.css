@@ -1,0 +1,125 @@
+/* ***************************************/
+/*             LaVuelta2026              */
+/*          Estilos generales            */
+/* ***************************************/
+/*    DATOS ESTUDIANTE                   */
+/* --------------------------------------*/
+/*  Nombre y Apellidos:Joaquín Alfaro López*/
+/*  Correo electrónico (uniovi):         */
+/*  Grupo de laboratorio:                */
+/* ***************************************/
+
+/* Gama cromática
+Color principal Azul (#0B3C5D)
+  o Contraste de 11.55:1 con color blanco
+  o Contraste de 8.01:1 con color secundario
+Color secundario Amarillo (#FFD166)
+  o Contraste de 14.56:1 con color negro
+  o Contraste de 8.01:1 con color principal
+Color negro (#000000)
+  o Contraste de 21:1 con color blanco
+Color blanco (#FFFFFF)
+  o Contraste de 11.55:1 con color principal
+  o Contraste de 21:1 con color negro
+*/
+
+/* Especificidad: 010 */
+:root {
+  --color-principal: #0B3C5D;
+  --color-secundario: #FFD166;
+  --color-negro: #000000;
+  --color-blanco: #FFFFFF;
+}
+
+/* Especificidad: 001 */
+body {
+  font-family: "Avant Garde", Helvetica, sans-serif;
+  background-color: var(--color-blanco);
+  color: var(--color-negro);
+}
+
+/* Especificidad: 001, 001 */
+header, footer {
+  background-color: var(--color-principal);
+  color: var(--color-secundario);
+}
+
+/* Especificidad: 002, 002 */
+header a, footer a {
+  color: var(--color-blanco);/*ADVERTENCIA: color de fondo heredado de 
+  header y footer --color-principal */ 
+  text-decoration-line:none ;
+}
+
+/*Especificidad: 012*/
+header a[aria-current="page"] {
+  background-color: var(--color-secundario);
+  color: var(--color-principal);
+}
+
+/*Especificidad: 003*/
+header + nav > ol {
+  list-style: none;
+}
+
+/*Especificidad: 004*/
+header + nav > ol > li {
+  display: inline;
+}
+/* Especificidad: 014 */
+section:has(picture) > ul > li:first-child {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Especificidad: 014 */
+section:has(picture) > ul > li:nth-child(2) {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+/* Especificidad: 014 */
+section:has(picture) > ul > li:nth-child(3) {
+  font-weight: bold;
+}
+
+/* Especificidad: 003 */
+section:has(article) > article {
+  text-align: center;
+}
+
+/* Especificidad: 001 */
+table {
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+/* Especificidad: 001 */
+caption {
+  font-weight: bold;
+  padding: 0.5em;
+}
+
+/* Especificidad: 001, 001 */
+th, td {
+  border: 1px solid var(--color-principal);
+  padding: 0.5em 1em;
+}
+
+/* Especificidad: 002 */
+thead th {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+}
+
+/* Especificidad: 012 */
+tbody th[scope="row"] {
+  background-color: var(--color-secundario);
+  color: var(--color-negro);
+  text-align: left;
+}
+
+/* Especificidad: 002 */
+tbody td {
+  text-align: right;
+}
